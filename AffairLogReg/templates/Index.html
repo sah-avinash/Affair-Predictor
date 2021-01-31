@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Affair Classification</title>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('static/wood.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  padding: 10px 300px 10px 300px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.content {
+  padding: 16px;
+  background-color: #d4ebf2;
+  box-shadow: 5px 5px #aaaaaa;
+  border-radius: 5px;
+}
+
+input[type=number] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=number]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+.predict {
+  background-color: #0000FF;
+  box-shadow: 1px 1px #aaaaaa;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+}
+
+.predict:hover {
+  opacity: 1;
+}
+
+
+</style>
+
+</head>
+<body>
+<form action = "/predict" method = "POST">
+  <div class = "content">
+    <h1>Affair data classification</h1>
+    <hr>
+    <div class ="form">
+            <label for = "occ_wife"><b>Wife's Occupation(1-6)</b></label><br>
+            <input type = "number" name = "occ_wife" id = "occ_wife" placeholder = "Wife's Occupation" required><br>
+
+            <label for = "occ_hus"><b>Husband's Occupation(1-6)</b></label><br>
+            <input type = "number" name = "occ_hus" id = "occ_hus" placeholder = "Husband's Occupation" required><br>
+
+            <label for = "rate_marriage"><b>Rate Marriage(1-5)</b></label><br>
+            <input type = "number" name = "rate_marriage" id = "rate_marriage" placeholder = "Rate Marriage" required><br>
+
+            <label for = "age"><b>Age</b></label><br>
+            <input type = "number" name = "age" id = "age" placeholder = "Age" required><br>
+
+            <label for = "yrs_married"><b>Years Married</b></label><br>
+            <input type = "number" name = "yrs_married" id = "yrs_married" placeholder = "Years Married" required><br>
+
+            <label for = "children"><b>Children</b></label><br>
+            <input type = "number" name = "children" id = "children" placeholder = "Children" required><br>
+
+            <label for = "religious"><b>Religious(1-5)</b></label><br>
+            <input type = "number" name = "religious" id = "religious" placeholder = "Religious" required><br>
+
+            <label for = "edu"><b>Education(0-20)</b></label><br>
+            <input type = "number" name = "edu" id = "edu" placeholder = "Education" required><br>
+
+            <hr>
+
+    </div>
+  </div>
+<div>
+    <p align = "center">
+        <button type="submit" class="predict" >Predict</button>
+    </p>
+</div>
+</form>
+
+</body>
+</html>
