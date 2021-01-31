@@ -1,2 +1,4 @@
 # Affair-Predictor
-Hey there, this is one of my first few project deployment. Hope you like it. 😊
+Hey there, 
+This one uses Logistic Regression.
+It is also one of my first few project deployments. Hope you like it. 😊
